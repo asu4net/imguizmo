@@ -15,6 +15,19 @@ project "imguizmo"
         "%{prj.location}/**.cpp"
     }
 
+    removefiles
+    {
+        "%{prj.location}/example/**.h",
+        "%{prj.location}/example/**.cpp",
+        "%{prj.location}/vcpkg-example/**.h",
+        "%{prj.location}/vcpkg-example/**.cpp"
+    }
+
+    includedirs
+    {
+        "%{IncludeDirs.imgui}"
+    }
+
     filter "system:windows"
         systemversion "latest"
     
